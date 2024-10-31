@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - My Flask App{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>About Us</h1>
+    <p>Welcome to My Flask App! We are dedicated to providing the best service possible.</p>
+    <p>Our mission is to create quality applications that meet the needs of our users and enhance their digital experience. We are passionate about technology, committed to continuous improvement, and focused on delivering a positive user experience.</p>
+
+    <h2>Our Team</h2>
+    <p>We have a diverse team of experts who are skilled in software development, design, and customer service.</p>
+
+    <h2>Our Values</h2>
+    <ul>
+        <li><strong>Quality</strong> - We strive for excellence in everything we do.</li>
+        <li><strong>Integrity</strong> - We operate with transparency and honesty.</li>
+        <li><strong>Customer Focus</strong> - Our users are at the center of our work.</li>
+        <li><strong>Innovation</strong> - We embrace new ideas and approaches to solve problems.</li>
+    </ul>
+
+    <h2>Contact Us</h2>
+    <p>If you'd like to know more about us or have any questions, feel free to reach out via our <a href="{{ url_for('main.contact') }}">contact page</a>.</p>
+</div>
+{% endblock %}
