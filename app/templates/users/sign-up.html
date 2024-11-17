@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Full Width Parent Container with Padding -->
+<div class="w-full max-w-lg mx-auto my-12 bg-white p-8 shadow-lg rounded-3xl">
+    <h2 class="text-2xl font-semibold text-center text-cus-clr-secondary mb-8">Join Today</h2>
+
+    <!-- Thinner Full Width Line Separator -->
+    <div class="w-full border-t-2 border-cus-clr-primary mb-6"></div>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <!-- Username field -->
+        <!-- <div class="mb-4">
+            <label for="username" class="block text-sm font-semibold text-gray-700">{{ form.username.label }}</label>
+            {% if form.username.errors %}
+                <input type="text" id="username" name="username" class="block w-full p-3 mt-2 border border-red-500 rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.username.data }}">
+                <div class="text-sm text-red-500 mt-1">
+                    {% for error in form.username.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <input type="text" id="username" name="username" class="block w-full p-3 mt-2 border rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.username.data }}">
+            {% endif %}
+        </div> -->
+
+        <!-- Email field -->
+        <div class="mb-4">
+            <label for="email" class="block text-sm font-semibold text-gray-700">{{ form.email.label }}</label>
+            {% if form.email.errors %}
+                <input type="email" id="email" name="email" class="block w-full p-3 mt-2 border border-red-500 rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.email.data }}">
+                <div class="text-sm text-red-500 mt-1">
+                    {% for error in form.email.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <input type="email" id="email" name="email" class="block w-full p-3 mt-2 border rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.email.data }}">
+            {% endif %}
+        </div>
+
+        <!-- First Name field -->
+        <!-- <div class="mb-4">
+            <label for="firstname" class="block text-sm font-semibold text-gray-700">{{ form.firstname.label }}</label>
+            {% if form.firstname.errors %}
+                <input type="text" id="firstname" name="firstname" class="block w-full p-3 mt-2 border border-red-500 rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.firstname.data }}">
+                <div class="text-sm text-red-500 mt-1">
+                    {% for error in form.firstname.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <input type="text" id="firstname" name="firstname" class="block w-full p-3 mt-2 border rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.firstname.data }}">
+            {% endif %}
+        </div> -->
+
+        <!-- Last Name field -->
+        <!-- <div class="mb-4">
+            <label for="lastname" class="block text-sm font-semibold text-gray-700">{{ form.lastname.label }}</label>
+            {% if form.lastname.errors %}
+                <input type="text" id="lastname" name="lastname" class="block w-full p-3 mt-2 border border-red-500 rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.lastname.data }}">
+                <div class="text-sm text-red-500 mt-1">
+                    {% for error in form.lastname.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <input type="text" id="lastname" name="lastname" class="block w-full p-3 mt-2 border rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.lastname.data }}">
+            {% endif %}
+        </div> -->
+
+        <!-- Password field -->
+        <div class="mb-4">
+            <label for="password" class="block text-sm font-semibold text-gray-700">{{ form.password.label }}</label>
+            {% if form.password.errors %}
+                <input type="password" id="password" name="password" class="block w-full p-3 mt-2 border border-red-500 rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.password.data }}">
+                <div class="text-sm text-red-500 mt-1">
+                    {% for error in form.password.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <input type="password" id="password" name="password" class="block w-full p-3 mt-2 border rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.password.data }}">
+            {% endif %}
+        </div>
+
+        <!-- Confirm Password field -->
+        <div class="mb-4">
+            <label for="confirm_password" class="block text-sm font-semibold text-gray-700">{{ form.confirm_password.label }}</label>
+            {% if form.confirm_password.errors %}
+                <input type="password" id="confirm_password" name="confirm_password" class="block w-full p-3 mt-2 border border-red-500 rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.confirm_password.data }}">
+                <div class="text-sm text-red-500 mt-1">
+                    {% for error in form.confirm_password.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <input type="password" id="confirm_password" name="confirm_password" class="block w-full p-3 mt-2 border rounded-full focus:ring-cus-clr-secondary focus:border-cus-clr-secondary" value="{{ form.confirm_password.data }}">
+            {% endif %}
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="w-full py-3 bg-cus-clr-secondary text-white rounded-full hover:bg-cus-clr-secondary-dark">Register</button>
+        </div>
+    </form>
+
+    <!-- Login Link -->
+    <div class="mt-4 text-center">
+        <p class="text-sm text-gray-600">Already have an account? <a href="{{ url_for('users.login') }}" class="text-cus-clr-secondary">Login</a></p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+1. Build: docker build -t makwande-api:latest .
+2. Init: docker swarm init
+3. Deploy: docker stack deploy -c docker-compose.yml makwande_api_stack
+    or docker stack deploy -c docker-stack.yml makwande_api_stack
+10. docker run -it makwande-api sh
+11. remove stack: docker stack rm makwande_api_stack
+12. docker swarm leave --force
+
+==========================================================================
+HEROKU
+
+1. heroku container:login  //LOGIN
+2. heroku create fancy-dog //CREATE APP, app_name returned
+3. heroku container:push web --app fancy-dog
+4. heroku container:release web -a fancy-dog
+
+================= FLASK MIGRATIONS ==================
+from flask_migrate import Migrate
+
+# Initialize Migrate with your Flask app and SQLAlchemy
+migrate = Migrate(app, db)
+
+1. flask db init
+2. flask db migrate -m "create user table"
+3. flask db migrate -m "create user table"

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* No need for additional rules if you use Tailwind */
+/* Example in your CSS file (styles.css) */
+.background-image {
+    background-image: url('../img/background-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
